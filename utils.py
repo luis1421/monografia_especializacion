@@ -18,6 +18,6 @@ def generate_data(paths, limit, parser):
         for i in reviews:
             if limit == limit:
                 break
-        data.append(i)
-        limit += 1
+            data.append(i)
+            limit += 1
     return data
