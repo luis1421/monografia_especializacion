@@ -14,10 +14,10 @@ def generate_data(paths, limit, parser):
     data = []
     for path in paths:
         reviews = parser(path = path)
-        limit = 0
+        count = 0
         for i in reviews:
-            if limit == limit:
+            if count == limit:
                 break
             data.append(i)
-            limit += 1
+            count += 1
     return data
