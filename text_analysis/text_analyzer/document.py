@@ -23,12 +23,14 @@ class Document:
     def _tokenize(self):
         tokens = []
         for i in self.data:
-            wt = word_tokenize(i[self.variable_name])
-            lower_tokens = [t.lower() for t in wt]
-            alpha_only = [t for t in lower_tokens if t.isalpha()]
-            #english_stops = stopwords.words('english')
-            no_stops = [t for t in alpha_only if t not in Document.english_stops]
-            tokens += no_stops
+            try:
+                wt = word_tokenize(i[self.variable_name])
+                lower_tokens = [t.lower() for t in wt]
+                alpha_only = [t for t in lower_tokens if t.isalpha()]
+                no_stops = [t for t in alpha_only if t not in Document.english_stops]
+                tokens += no_stops
+            except KeyError:
+                continue
         return tokens
     
     def _count_words(self):
