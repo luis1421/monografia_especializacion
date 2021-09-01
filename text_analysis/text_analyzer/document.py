@@ -45,4 +45,3 @@ class Document:
     
     def _len_word(self):
         return counter_len(self.tokens)
-    
