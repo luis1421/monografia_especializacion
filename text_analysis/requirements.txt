@@ -1,9 +1,9 @@
-google-play-scraper>=0.1.2
-matplotlib>=3.0.0
-numpy>=1.20.2
-pandas>=1.2.3
-python-dateutil>=2.8.1
-six>=1.15.0
+google-play-scraper
+matplotlib
+numpy
+pandas
+python-dateutil
+six
 pycodestyle
 spacy
 nltk
